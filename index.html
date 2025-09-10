@@ -1,0 +1,87 @@
+<!-- ===== index.html ===== -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>بوابة منافع</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="banner">
+  
+</div>
+
+  <header class="site-header">
+    <div class="overlay">
+      <h1 class="site-title">بوابة بوابة منافع</h1>
+      <p class="site-sub">أخبار، تحليلات، وتغطية ميدانية لموانئ ومناجم الحديد</p>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <ul>
+      <li><a href="#latest">الأحدث</a></li>
+      <li><a href="#reports">تقارير</a></li>
+      <li><a href="#map">الخريطة</a></li>
+      <li><a href="#contact">تواصل معنا</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="latest" class="container">
+      <h2>أحدث الأخبار</h2>
+      <div class="cards" id="articles"></div>
+    </section>
+
+    <section id="reports" class="container">
+      <h2>تقارير وتحليلات</h2>
+      <article class="report">
+        <h3>تأثير التصدير على الاقتصاد المحلي</h3>
+        <p>تقرير موجز يشرح دور مناجم الحديد في الناتج المحلي وتشغيل السكان المحليين....</p>
+        <a class="read-more" href="#">اقرأ المزيد</a>
+      </article>
+    </section>
+
+    <section id="map" class="container">
+      <h2>خريطة المواقع</h2>
+      <div class="map-placeholder">خريطة المواقع</div>
+    </section>
+
+    <section id="contact" class="container contact-section">
+      <h2>تواصل معنا</h2>
+      <form id="contactForm" novalidate>
+        <label for="name">الاسم</label>
+        <input type="text" id="name" name="name" placeholder="اسمك الكامل" required />
+
+        <label for="email">البريد الإلكتروني</label>
+        <input type="email" id="email" name="email" placeholder="example@mail.com" required />
+
+        <label for="topic">الموضوع</label>
+        <select id="topic" name="topic">
+          <option value="خبر">خبر</option>
+          <option value="شكوى">شكوى</option>
+          <option value="اقتراح">اقتراح</option>
+          <option value="متابعة">متابعة صحفية</option>
+        </select>
+
+        <label for="message">نص الرسالة</label>
+        <textarea id="message" name="message" rows="6" placeholder="اكتب رسالتك هنا..." required></textarea>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">إرسال</button>
+          <button type="button" id="saveLocal" class="btn">حفظ محليًا</button>
+        </div>
+
+        <div id="formFeedback" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> بوابة منافع - موريتانيا · جميع الحقوق محفوظة</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
