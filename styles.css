@@ -8,7 +8,7 @@
 body{
 font-family:'Cairo','Amiri','Tahoma',sans-serif;
 margin:0;
-background:url('images/bg.jpg') no-repeat center center fixed;
+background:url('manafa.jpg') no-repeat center center fixed;
 background-size:cover;
 color:#111;
 line-height:1.8;
@@ -69,7 +69,7 @@ input,textarea,select{direction:rtl}
 }
 
 .banner {
-  background-image: url("WhatsApp\ Image\ 2025-09-09\ à\ 17.20.22_d9d9b1ac.jpg"); /* ضع مسار الصورة هنا */
+  background-image: url("manafa.jpg"); /* ضع مسار الصورة هنا */
   background-size: cover;   /* لتغطي الصورة كامل المساحة */
   background-position: center; /* لتمركز الصورة */
   background-repeat: no-repeat; /* منع تكرارها */
