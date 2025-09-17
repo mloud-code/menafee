@@ -94,25 +94,51 @@ input,textarea,select{direction:rtl}
 }
 
 
-/* responsive.css */
-:root{ --container-max:1200px; --gutter:16px; --font-base:16px; }
-*{box-sizing:border-box;margin:0;padding:0}
-html{font-size:var(--font-base)}
-body{font-family:system-ui,Arial;line-height:1.4;color:#111}
-.container{width:100%;max-width:var(--container-max);margin:0 auto;padding:0 var(--gutter)}
-.header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
-.hamburger{display:inline-block;background:none;border:0;font-size:1.6rem}
-.nav{display:none;gap:12px}
-.main-grid{display:grid;grid-template-columns:1fr;gap:16px;padding:16px 0}
-.card{padding:16px;border-radius:8px;background:#f8f8f8}
-
-/* breakpoints */
-@media(min-width:768px){
-  .nav{display:flex}
-  .hamburger{display:none}
-  .main-grid{grid-template-columns:300px 1fr}
+/* قاعدة عامة: لا يسمح بالتمرير الأفقي */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
-@media(min-width:1200px){
-  :root{--container-max:1400px}
-  .main-grid{grid-template-columns:350px 1fr}
+
+/* صور وفيديوهات تصغر مع الشاشة */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* حاويات أساسية */
+.container {
+  width: 100%;
+  padding: 0 8px; /* مسافة بسيطة من الجوانب */
+  box-sizing: border-box;
+}
+
+/* نصوص أصغر قليلاً على iPhone SE */
+@media (max-width: 375px) {
+  body {
+    font-size: 14px; /* بدلاً من 16px */
+  }
+
+  h1 { font-size: 1.4rem; }
+  h2 { font-size: 1.2rem; }
+  h3 { font-size: 1rem; }
+
+  /* القوائم أو الهيدر العمودي بدل الأفقي */
+  .header, nav, .main-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* إذا عندك sidebar يخنق الشاشة، نخفيه */
+  .sidebar {
+    display: none;
+  }
+
+  /* الكروت أو الأعمدة تصير بعمود واحد */
+  .card, .column {
+    width: 100% !important;
+  }
 }
