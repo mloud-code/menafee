@@ -115,7 +115,7 @@ img, video, iframe {
 }
 
 /* نصوص أصغر قليلاً على iPhone SE */
-@media (max-width: 375px) {
+@media (max-width: 100px) {
   body {
     font-size: 14px; /* بدلاً من 16px */
   }
